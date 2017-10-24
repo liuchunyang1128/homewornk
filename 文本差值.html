@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本差值</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <h1>{{message}}</h1>
+    <!--文本差值-->
+    <p>我出生于{{year}}年，今年{{age}}岁</p>
+</div>
+<script type="application/javascript">
+    //  文本差值 {{}} Mustache
+    //  特别常用
+    var vm = new Vue({
+        el:'#app',
+        data:{
+          message:'Hello Vue.js',
+            year:'1999',
+            age:'18'
+        }
+    })
+</script>
+</body>
+</html>

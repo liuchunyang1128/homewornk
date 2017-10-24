@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-show</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-show="isShow">我是一段 v-show  展现文字</p>
+    <p v-if="isShow">我是一段 v-if  展现文字</p>
+    <button @click="change">切换</button>
+</div>
+<script type="application/javascript">
+    // 1. 一般用于频繁切换，显示和隐藏的地方
+    // 2. v-show 是修改标签  v-if 是判断
+    new Vue({
+        el:'#app',
+        data:{
+            isShow:true,
+            change:function () {
+                this.isShow = !this.isShow
+            }
+        }
+    })
+</script>
+</body>
+</html>

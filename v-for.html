@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-for</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <p v-for="phonePre in phonePres">{{phonePre.pre}}&nbsp;&nbsp;&nbsp;&nbsp;{{phonePre.name}}</p>
+    <br>
+    <p v-for="(value,index) in phonePres">value:{{value}}index:{{index}}</p>
+    <h1 v-for="value in student">{{value}}</h1>
+    <h1 v-for="(value,key,index) in student">{{value}} : {{key}} - {{index}}</h1>
+
+</div>
+<script type="application/javascript">
+    //v-for  即可遍历 数组 ， 也能遍历 JSON对象7
+    //1. 都可以获取下标
+    //2.对象值遍的获取下标顺序为 value index
+    new Vue({
+        el:'#app',
+        data:{
+            student:{
+              name:'班长',
+              age:'18',
+              sex:'？',
+              hobby:'男'
+            },
+            phonePres:[
+                {pre:'+86',name:'中国'},
+                {pre:'+61',name:'澳大利亚'},
+                {pre:'+852',name:'中国香港'},
+                {pre:'+33',name:'法国'}
+            ]
+        }
+    })
+</script>
+</body>
+</html>

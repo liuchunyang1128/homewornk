@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-on</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    <button v-on:click.prevent.stop="clicked">点我</button>
+    <button @click="clicked">再点我</button>
+</div>
+<script type="application/javascript">
+    //所有原生 HTML 都可以绑定事件
+    //v-on
+    //1.v-on：事件名
+    //2.修饰符  就是针对于系统一些常用 event 的操作
+    //  .prevent  :  组织默认事件  .stop : 阻止冒泡
+    //3.缩写
+    new Vue({
+        el:'#app',
+        methods:{
+            clicked:function () {
+              console.log("你坏");
+            }
+        }
+    })
+</script>
+</body>
+</html>

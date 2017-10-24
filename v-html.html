@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<div id="app">
+    {{html}}
+    <!--v-html="html： 解析 html代码 可以进行html代码渲染"-->
+    <div v-html="html"></div>
+</div>
+<script type="application/javascript">
+    //v-html="html : 读取一段html代码
+    //常用于数据内容为html时
+    //例如：新闻、文章
+    new Vue({
+        el:'#app',
+        data:{
+            html:'<h1>哈哈哈哈哈哈哈哈</h1>'
+        }
+    })
+</script>
+</body>
+</html>

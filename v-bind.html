@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+<!--1. v-bind 数据绑定，应用于HTML的属性
+       v-bind 内容可以使用表达式
+       2.v-bind可以缩写-->
+<div id="app">
+    <p v-bind:id="'list' + number">我是第是10号文本</p>
+    <!--缩写-->
+    <p :id="'list + num'">我是第22号文本</p>
+</div>
+<script type="application/javascript">
+    new Vue({
+        el:'#app',
+        data:{
+            isShow:true
+        }
+    })
+</script>
+<!--2.-->
+</body>
+</html>
